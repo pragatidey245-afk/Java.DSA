@@ -4,17 +4,15 @@ public class Main{
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
 
-        //input height.
-        System.out.print("Enter the value of height: ");
-        int height = input.nextInt();
+        //input diagonals.
+        System.out.print("Enter the value of first diagonal: ");
+        int d1 = input.nextInt();
 
-        //input base.
-        System.out.print("Enter the value of base: ");
-        int base = input.nextInt();
-        //output area.
+        System.out.print("Enter the value of second diagonal: ");
+        int d2 = input.nextInt();
 
-        int area = height * base;
+        int area = (d1 * d2) / 2;
 
-        System.out.print("The area of parallelogram is: " + area );
+        System.out.print("The area of Rhombus is: " + area);
     }
 }
