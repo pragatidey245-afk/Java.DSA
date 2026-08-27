@@ -4,22 +4,18 @@ public class Main{
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Enter the value of number: ");
-        int number = input.nextInt();
+        System.out.print("Enter value of the day: ");
+        int day = input.nextInt();
 
-        System.out.println("The armstrong number is: " + fun(number));
-    }
-
-    static boolean fun(int num){
-        int sum = 0;
-        int original = num;
-        int digits = String.valueOf(num).length();
-        while(num > 0){
-            int last = num % 10;
-            sum += (int)Math.pow(last,digits);
-            num /= 10;
+        while (day>=0|| day<=31) {
+            if(day % 2 == 0){
+                System.out.print("Allowed to go out.");
+                break;
+            }
+            else{
+                System.out.print("Not allowed to go out.");
+                break;
+            }
         }
-
-        return original == sum;
     }
 }
