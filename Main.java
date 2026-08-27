@@ -4,15 +4,22 @@ public class Main{
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
 
-        //input diagonals.
-        System.out.print("Enter the value of first diagonal: ");
-        int d1 = input.nextInt();
+        System.out.print("Enter the value of number: ");
+        int number = input.nextInt();
 
-        System.out.print("Enter the value of second diagonal: ");
-        int d2 = input.nextInt();
+        System.out.println("The armstrong number is: " + fun(number));
+    }
 
-        int area = (d1 * d2) / 2;
+    static boolean fun(int num){
+        int sum = 0;
+        int original = num;
+        int digits = String.valueOf(num).length();
+        while(num > 0){
+            int last = num % 10;
+            sum += (int)Math.pow(last,digits);
+            num /= 10;
+        }
 
-        System.out.print("The area of Rhombus is: " + area);
+        return original == sum;
     }
 }
